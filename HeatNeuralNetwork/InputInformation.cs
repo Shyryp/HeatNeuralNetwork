@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace HeatNeuralNetwork
 {
-    public partial class Form1 : Form
+    public partial class InputInformation : Form
     {
-        public Form1()
+        public InputInformation()
         {
             InitializeComponent();
         }
