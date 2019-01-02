@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="TeachNN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TeachNN.Designer.cs">
+      <DependentUpon>TeachNN.cs</DependentUpon>
+    </Compile>
     <Compile Include="InputInformation.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,6 +66,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="TeachNN.resx">
+      <DependentUpon>TeachNN.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="InputInformation.resx">
       <DependentUpon>InputInformation.cs</DependentUpon>
     </EmbeddedResource>

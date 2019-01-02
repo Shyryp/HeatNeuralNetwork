@@ -28,159 +28,173 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
+            this.bPlot1 = new System.Windows.Forms.Button();
+            this.bPlot2 = new System.Windows.Forms.Button();
+            this.bPlot3 = new System.Windows.Forms.Button();
+            this.bPlot6 = new System.Windows.Forms.Button();
+            this.bPlot5 = new System.Windows.Forms.Button();
+            this.bPlot4 = new System.Windows.Forms.Button();
+            this.bPlot9 = new System.Windows.Forms.Button();
+            this.bPlot8 = new System.Windows.Forms.Button();
+            this.bPlot7 = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.создатьВыборкуToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.сброситьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.сброситьToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.сброситьToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.teachNNToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fillToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.calculateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.resetAllToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button1
+            // bPlot1
             // 
-            this.button1.Location = new System.Drawing.Point(22, 47);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(143, 66);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Участок 1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.bPlot1.Location = new System.Drawing.Point(22, 47);
+            this.bPlot1.Name = "bPlot1";
+            this.bPlot1.Size = new System.Drawing.Size(143, 66);
+            this.bPlot1.TabIndex = 0;
+            this.bPlot1.Text = "Участок 1";
+            this.bPlot1.UseVisualStyleBackColor = true;
+            this.bPlot1.Click += new System.EventHandler(this.bPlot1_Click);
             // 
-            // button2
+            // bPlot2
             // 
-            this.button2.Location = new System.Drawing.Point(180, 47);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(146, 66);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Участок 2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.bPlot2.Location = new System.Drawing.Point(180, 47);
+            this.bPlot2.Name = "bPlot2";
+            this.bPlot2.Size = new System.Drawing.Size(146, 66);
+            this.bPlot2.TabIndex = 1;
+            this.bPlot2.Text = "Участок 2";
+            this.bPlot2.UseVisualStyleBackColor = true;
+            this.bPlot2.Click += new System.EventHandler(this.bPlot2_Click);
             // 
-            // button3
+            // bPlot3
             // 
-            this.button3.Location = new System.Drawing.Point(341, 47);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(141, 66);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Участок 3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.bPlot3.Location = new System.Drawing.Point(341, 47);
+            this.bPlot3.Name = "bPlot3";
+            this.bPlot3.Size = new System.Drawing.Size(141, 66);
+            this.bPlot3.TabIndex = 2;
+            this.bPlot3.Text = "Участок 3";
+            this.bPlot3.UseVisualStyleBackColor = true;
+            this.bPlot3.Click += new System.EventHandler(this.bPlot3_Click);
             // 
-            // button4
+            // bPlot6
             // 
-            this.button4.Location = new System.Drawing.Point(341, 119);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(141, 66);
-            this.button4.TabIndex = 5;
-            this.button4.Text = "Участок 6";
-            this.button4.UseVisualStyleBackColor = true;
+            this.bPlot6.Location = new System.Drawing.Point(341, 119);
+            this.bPlot6.Name = "bPlot6";
+            this.bPlot6.Size = new System.Drawing.Size(141, 66);
+            this.bPlot6.TabIndex = 5;
+            this.bPlot6.Text = "Участок 6";
+            this.bPlot6.UseVisualStyleBackColor = true;
+            this.bPlot6.Click += new System.EventHandler(this.bPlot6_Click);
             // 
-            // button5
+            // bPlot5
             // 
-            this.button5.Location = new System.Drawing.Point(180, 119);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(146, 66);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Участок 5";
-            this.button5.UseVisualStyleBackColor = true;
+            this.bPlot5.Location = new System.Drawing.Point(180, 119);
+            this.bPlot5.Name = "bPlot5";
+            this.bPlot5.Size = new System.Drawing.Size(146, 66);
+            this.bPlot5.TabIndex = 4;
+            this.bPlot5.Text = "Участок 5";
+            this.bPlot5.UseVisualStyleBackColor = true;
+            this.bPlot5.Click += new System.EventHandler(this.bPlot5_Click);
             // 
-            // button6
+            // bPlot4
             // 
-            this.button6.Location = new System.Drawing.Point(22, 119);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(143, 66);
-            this.button6.TabIndex = 3;
-            this.button6.Text = "Участок 4";
-            this.button6.UseVisualStyleBackColor = true;
+            this.bPlot4.Location = new System.Drawing.Point(22, 119);
+            this.bPlot4.Name = "bPlot4";
+            this.bPlot4.Size = new System.Drawing.Size(143, 66);
+            this.bPlot4.TabIndex = 3;
+            this.bPlot4.Text = "Участок 4";
+            this.bPlot4.UseVisualStyleBackColor = true;
+            this.bPlot4.Click += new System.EventHandler(this.bPlot4_Click);
             // 
-            // button7
+            // bPlot9
             // 
-            this.button7.Location = new System.Drawing.Point(341, 191);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(141, 66);
-            this.button7.TabIndex = 8;
-            this.button7.Text = "Участок 9";
-            this.button7.UseVisualStyleBackColor = true;
+            this.bPlot9.Location = new System.Drawing.Point(341, 191);
+            this.bPlot9.Name = "bPlot9";
+            this.bPlot9.Size = new System.Drawing.Size(141, 66);
+            this.bPlot9.TabIndex = 8;
+            this.bPlot9.Text = "Участок 9";
+            this.bPlot9.UseVisualStyleBackColor = true;
+            this.bPlot9.Click += new System.EventHandler(this.bPlot9_Click);
             // 
-            // button8
+            // bPlot8
             // 
-            this.button8.Location = new System.Drawing.Point(180, 191);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(146, 66);
-            this.button8.TabIndex = 7;
-            this.button8.Text = "Участок 8";
-            this.button8.UseVisualStyleBackColor = true;
+            this.bPlot8.Location = new System.Drawing.Point(180, 191);
+            this.bPlot8.Name = "bPlot8";
+            this.bPlot8.Size = new System.Drawing.Size(146, 66);
+            this.bPlot8.TabIndex = 7;
+            this.bPlot8.Text = "Участок 8";
+            this.bPlot8.UseVisualStyleBackColor = true;
+            this.bPlot8.Click += new System.EventHandler(this.bPlot8_Click);
             // 
-            // button9
+            // bPlot7
             // 
-            this.button9.Location = new System.Drawing.Point(22, 191);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(143, 66);
-            this.button9.TabIndex = 6;
-            this.button9.Text = "Участок 7";
-            this.button9.UseVisualStyleBackColor = true;
+            this.bPlot7.Location = new System.Drawing.Point(22, 191);
+            this.bPlot7.Name = "bPlot7";
+            this.bPlot7.Size = new System.Drawing.Size(143, 66);
+            this.bPlot7.TabIndex = 6;
+            this.bPlot7.Text = "Участок 7";
+            this.bPlot7.UseVisualStyleBackColor = true;
+            this.bPlot7.Click += new System.EventHandler(this.bPlot7_Click);
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.создатьВыборкуToolStripMenuItem,
-            this.сброситьToolStripMenuItem,
-            this.сброситьToolStripMenuItem1,
-            this.сброситьToolStripMenuItem2});
+            this.teachNNToolStripMenuItem,
+            this.fillToolStripMenuItem,
+            this.calculateToolStripMenuItem,
+            this.resetAllToolStripMenuItem2});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(503, 24);
             this.menuStrip1.TabIndex = 9;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // создатьВыборкуToolStripMenuItem
+            // teachNNToolStripMenuItem
             // 
-            this.создатьВыборкуToolStripMenuItem.Name = "создатьВыборкуToolStripMenuItem";
-            this.создатьВыборкуToolStripMenuItem.Size = new System.Drawing.Size(159, 20);
-            this.создатьВыборкуToolStripMenuItem.Text = "Обучить нейронную сеть";
+            this.teachNNToolStripMenuItem.Name = "teachNNToolStripMenuItem";
+            this.teachNNToolStripMenuItem.Size = new System.Drawing.Size(86, 20);
+            this.teachNNToolStripMenuItem.Text = "Обучить НС";
+            this.teachNNToolStripMenuItem.Click += new System.EventHandler(this.teachNNToolStripMenuItem_Click);
             // 
-            // сброситьToolStripMenuItem
+            // fillToolStripMenuItem
             // 
-            this.сброситьToolStripMenuItem.Name = "сброситьToolStripMenuItem";
-            this.сброситьToolStripMenuItem.Size = new System.Drawing.Size(96, 20);
-            this.сброситьToolStripMenuItem.Text = "Заполнить БД";
+            this.fillToolStripMenuItem.Name = "fillToolStripMenuItem";
+            this.fillToolStripMenuItem.Size = new System.Drawing.Size(78, 20);
+            this.fillToolStripMenuItem.Text = "Заполнить";
+            this.fillToolStripMenuItem.Click += new System.EventHandler(this.fillToolStripMenuItem_Click);
             // 
-            // сброситьToolStripMenuItem1
+            // calculateToolStripMenuItem
             // 
-            this.сброситьToolStripMenuItem1.Name = "сброситьToolStripMenuItem1";
-            this.сброситьToolStripMenuItem1.Size = new System.Drawing.Size(80, 20);
-            this.сброситьToolStripMenuItem1.Text = "Рассчитать";
+            this.calculateToolStripMenuItem.Name = "calculateToolStripMenuItem";
+            this.calculateToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
+            this.calculateToolStripMenuItem.Text = "Рассчитать";
+            this.calculateToolStripMenuItem.Click += new System.EventHandler(this.calculateToolStripMenuItem_Click);
             // 
-            // сброситьToolStripMenuItem2
+            // resetAllToolStripMenuItem2
             // 
-            this.сброситьToolStripMenuItem2.Name = "сброситьToolStripMenuItem2";
-            this.сброситьToolStripMenuItem2.Size = new System.Drawing.Size(72, 20);
-            this.сброситьToolStripMenuItem2.Text = "Сбросить";
+            this.resetAllToolStripMenuItem2.Name = "resetAllToolStripMenuItem2";
+            this.resetAllToolStripMenuItem2.Size = new System.Drawing.Size(93, 20);
+            this.resetAllToolStripMenuItem2.Text = "Сбросить всё";
+            this.resetAllToolStripMenuItem2.Click += new System.EventHandler(this.resetAllToolStripMenuItem2_Click);
             // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(503, 281);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.button9);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(503, 314);
+            this.Controls.Add(this.bPlot9);
+            this.Controls.Add(this.bPlot8);
+            this.Controls.Add(this.bPlot7);
+            this.Controls.Add(this.bPlot6);
+            this.Controls.Add(this.bPlot5);
+            this.Controls.Add(this.bPlot4);
+            this.Controls.Add(this.bPlot3);
+            this.Controls.Add(this.bPlot2);
+            this.Controls.Add(this.bPlot1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainWindow";
             this.Text = "HeatNeuralNetwork";
+            this.Load += new System.EventHandler(this.MainWindow_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -190,20 +204,20 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button bPlot1;
+        private System.Windows.Forms.Button bPlot2;
+        private System.Windows.Forms.Button bPlot3;
+        private System.Windows.Forms.Button bPlot6;
+        private System.Windows.Forms.Button bPlot5;
+        private System.Windows.Forms.Button bPlot4;
+        private System.Windows.Forms.Button bPlot9;
+        private System.Windows.Forms.Button bPlot8;
+        private System.Windows.Forms.Button bPlot7;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem создатьВыборкуToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem сброситьToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem сброситьToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem сброситьToolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem teachNNToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem fillToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem calculateToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem resetAllToolStripMenuItem2;
     }
 }
 

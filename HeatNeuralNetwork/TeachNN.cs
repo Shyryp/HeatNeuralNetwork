@@ -10,21 +10,21 @@ using System.Windows.Forms;
 
 namespace HeatNeuralNetwork
 {
-    public partial class InputInformation : Form
+    public partial class TeachNN : Form
     {
         MainWindow main;
-        public InputInformation(MainWindow mainWindow)
+        public TeachNN(MainWindow mainWindow)
         {
             InitializeComponent();
             main = mainWindow;
         }
 
-        private void bSave_Click(object sender, EventArgs e)
+        private void bTeach_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void bInputTestInfo_Click(object sender, EventArgs e)
+        private void bInputTestTeachInfo_Click(object sender, EventArgs e)
         {
 
         }
