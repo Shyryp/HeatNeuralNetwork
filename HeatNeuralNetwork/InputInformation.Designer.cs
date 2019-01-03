@@ -84,6 +84,7 @@
             this.lBPlots.Name = "lBPlots";
             this.lBPlots.Size = new System.Drawing.Size(108, 324);
             this.lBPlots.TabIndex = 1;
+            this.lBPlots.SelectedIndexChanged += new System.EventHandler(this.lBPlots_SelectedIndexChanged);
             // 
             // bInputTestInfo
             // 

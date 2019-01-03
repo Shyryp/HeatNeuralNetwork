@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HeatNeuralNetwork
 {
-    class Plot
+    public class Plot
     {
         public int pipelineLength = 0;
         public int pipelineDiameter = 0;

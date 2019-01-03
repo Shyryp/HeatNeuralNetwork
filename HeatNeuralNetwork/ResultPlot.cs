@@ -12,9 +12,23 @@ namespace HeatNeuralNetwork
 {
     public partial class ResultPlot : Form
     {
-        public ResultPlot()
+        public ResultPlot(Plot plot, int aTemp)
         {
             InitializeComponent();
+            lResultAT.Text = Convert.ToString( aTemp);
+            lResultLength.Text = Convert.ToString(plot.pipelineLength);
+            lResultDiameter.Text = Convert.ToString(plot.pipelineDiameter);
+            lResultPressure.Text = Convert.ToString(plot.operatingPressure);
+            lResultTemp.Text = Convert.ToString(plot.workingTemperature);
+            lResultRTime.Text = Convert.ToString(plot.lifeCycle);
+            lResultDays.Text = Convert.ToString(plot.numberDays);
+            lResultCountNotWork.Text = Convert.ToString(plot.numberBreakdowns);
+            lResultPointNotWork.Text = Convert.ToString(plot.placesBreakdowns);
+            lResultPrice.Text = Convert.ToString(plot.price);
+            lResultWorkFinish.Text = Convert.ToString(plot.daysAnswer);
+            lResultPointNotWorkFinish.Text = Convert.ToString(plot.pointAnswer);
+            lResultPriceFinish.Text = Convert.ToString(plot.priceAnswer);
+            
         }
     }
 }

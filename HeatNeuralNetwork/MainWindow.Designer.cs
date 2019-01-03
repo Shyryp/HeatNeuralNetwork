@@ -47,6 +47,7 @@
             // 
             // bPlot1
             // 
+            this.bPlot1.Enabled = false;
             this.bPlot1.Location = new System.Drawing.Point(22, 47);
             this.bPlot1.Name = "bPlot1";
             this.bPlot1.Size = new System.Drawing.Size(143, 66);
@@ -57,6 +58,7 @@
             // 
             // bPlot2
             // 
+            this.bPlot2.Enabled = false;
             this.bPlot2.Location = new System.Drawing.Point(180, 47);
             this.bPlot2.Name = "bPlot2";
             this.bPlot2.Size = new System.Drawing.Size(146, 66);
@@ -67,6 +69,7 @@
             // 
             // bPlot3
             // 
+            this.bPlot3.Enabled = false;
             this.bPlot3.Location = new System.Drawing.Point(341, 47);
             this.bPlot3.Name = "bPlot3";
             this.bPlot3.Size = new System.Drawing.Size(141, 66);
@@ -77,6 +80,7 @@
             // 
             // bPlot6
             // 
+            this.bPlot6.Enabled = false;
             this.bPlot6.Location = new System.Drawing.Point(341, 119);
             this.bPlot6.Name = "bPlot6";
             this.bPlot6.Size = new System.Drawing.Size(141, 66);
@@ -87,6 +91,7 @@
             // 
             // bPlot5
             // 
+            this.bPlot5.Enabled = false;
             this.bPlot5.Location = new System.Drawing.Point(180, 119);
             this.bPlot5.Name = "bPlot5";
             this.bPlot5.Size = new System.Drawing.Size(146, 66);
@@ -97,6 +102,7 @@
             // 
             // bPlot4
             // 
+            this.bPlot4.Enabled = false;
             this.bPlot4.Location = new System.Drawing.Point(22, 119);
             this.bPlot4.Name = "bPlot4";
             this.bPlot4.Size = new System.Drawing.Size(143, 66);
@@ -107,6 +113,7 @@
             // 
             // bPlot9
             // 
+            this.bPlot9.Enabled = false;
             this.bPlot9.Location = new System.Drawing.Point(341, 191);
             this.bPlot9.Name = "bPlot9";
             this.bPlot9.Size = new System.Drawing.Size(141, 66);
@@ -117,6 +124,7 @@
             // 
             // bPlot8
             // 
+            this.bPlot8.Enabled = false;
             this.bPlot8.Location = new System.Drawing.Point(180, 191);
             this.bPlot8.Name = "bPlot8";
             this.bPlot8.Size = new System.Drawing.Size(146, 66);
@@ -127,6 +135,7 @@
             // 
             // bPlot7
             // 
+            this.bPlot7.Enabled = false;
             this.bPlot7.Location = new System.Drawing.Point(22, 191);
             this.bPlot7.Name = "bPlot7";
             this.bPlot7.Size = new System.Drawing.Size(143, 66);
