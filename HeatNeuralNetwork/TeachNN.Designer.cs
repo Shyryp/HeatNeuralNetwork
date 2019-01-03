@@ -49,7 +49,7 @@
             this.tBTeachNumberBreakdowns = new System.Windows.Forms.TextBox();
             this.tBTeachPlacesBreakdowns = new System.Windows.Forms.TextBox();
             this.tBTeachPrice = new System.Windows.Forms.TextBox();
-            this.Plot = new System.Windows.Forms.Label();
+            this.lSet = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -60,12 +60,14 @@
             this.label14 = new System.Windows.Forms.Label();
             this.tBDaysTrue = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.tBAmbientTemp = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // bTeach
             // 
-            this.bTeach.Location = new System.Drawing.Point(451, 368);
+            this.bTeach.Location = new System.Drawing.Point(451, 406);
             this.bTeach.Name = "bTeach";
             this.bTeach.Size = new System.Drawing.Size(116, 23);
             this.bTeach.TabIndex = 0;
@@ -90,12 +92,12 @@
             "Сет 9"});
             this.lBTeachPlots.Location = new System.Drawing.Point(12, 36);
             this.lBTeachPlots.Name = "lBTeachPlots";
-            this.lBTeachPlots.Size = new System.Drawing.Size(81, 324);
+            this.lBTeachPlots.Size = new System.Drawing.Size(81, 364);
             this.lBTeachPlots.TabIndex = 1;
             // 
             // bInputTestTeachInfo
             // 
-            this.bInputTestTeachInfo.Location = new System.Drawing.Point(12, 368);
+            this.bInputTestTeachInfo.Location = new System.Drawing.Point(12, 406);
             this.bInputTestTeachInfo.Name = "bInputTestTeachInfo";
             this.bInputTestTeachInfo.Size = new System.Drawing.Size(201, 23);
             this.bInputTestTeachInfo.TabIndex = 2;
@@ -107,7 +109,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(14, 40);
+            this.label1.Location = new System.Drawing.Point(14, 35);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(116, 13);
             this.label1.TabIndex = 3;
@@ -117,7 +119,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(14, 74);
+            this.label2.Location = new System.Drawing.Point(14, 69);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(89, 13);
             this.label2.TabIndex = 4;
@@ -127,7 +129,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(14, 112);
+            this.label3.Location = new System.Drawing.Point(14, 107);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(103, 13);
             this.label3.TabIndex = 5;
@@ -137,7 +139,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(14, 144);
+            this.label4.Location = new System.Drawing.Point(14, 139);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(120, 13);
             this.label4.TabIndex = 6;
@@ -147,7 +149,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(14, 181);
+            this.label5.Location = new System.Drawing.Point(14, 176);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(154, 13);
             this.label5.TabIndex = 7;
@@ -157,7 +159,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label6.Location = new System.Drawing.Point(14, 220);
+            this.label6.Location = new System.Drawing.Point(14, 215);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(141, 13);
             this.label6.TabIndex = 8;
@@ -167,7 +169,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label7.Location = new System.Drawing.Point(14, 256);
+            this.label7.Location = new System.Drawing.Point(14, 251);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(116, 13);
             this.label7.TabIndex = 9;
@@ -177,7 +179,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label8.Location = new System.Drawing.Point(14, 291);
+            this.label8.Location = new System.Drawing.Point(14, 286);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(155, 13);
             this.label8.TabIndex = 10;
@@ -187,7 +189,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label9.Location = new System.Drawing.Point(14, 324);
+            this.label9.Location = new System.Drawing.Point(14, 319);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(126, 13);
             this.label9.TabIndex = 11;
@@ -195,7 +197,7 @@
             // 
             // tBTeachPipelineLength
             // 
-            this.tBTeachPipelineLength.Location = new System.Drawing.Point(168, 40);
+            this.tBTeachPipelineLength.Location = new System.Drawing.Point(168, 35);
             this.tBTeachPipelineLength.Name = "tBTeachPipelineLength";
             this.tBTeachPipelineLength.Size = new System.Drawing.Size(44, 20);
             this.tBTeachPipelineLength.TabIndex = 12;
@@ -203,7 +205,7 @@
             // 
             // tBTeachPipelineDiameter
             // 
-            this.tBTeachPipelineDiameter.Location = new System.Drawing.Point(168, 74);
+            this.tBTeachPipelineDiameter.Location = new System.Drawing.Point(168, 69);
             this.tBTeachPipelineDiameter.Name = "tBTeachPipelineDiameter";
             this.tBTeachPipelineDiameter.Size = new System.Drawing.Size(44, 20);
             this.tBTeachPipelineDiameter.TabIndex = 13;
@@ -211,7 +213,7 @@
             // 
             // tBTeachOperatingPressure
             // 
-            this.tBTeachOperatingPressure.Location = new System.Drawing.Point(168, 112);
+            this.tBTeachOperatingPressure.Location = new System.Drawing.Point(168, 107);
             this.tBTeachOperatingPressure.Name = "tBTeachOperatingPressure";
             this.tBTeachOperatingPressure.Size = new System.Drawing.Size(44, 20);
             this.tBTeachOperatingPressure.TabIndex = 14;
@@ -219,7 +221,7 @@
             // 
             // tBTeachWorkingTemperature
             // 
-            this.tBTeachWorkingTemperature.Location = new System.Drawing.Point(168, 144);
+            this.tBTeachWorkingTemperature.Location = new System.Drawing.Point(168, 139);
             this.tBTeachWorkingTemperature.Name = "tBTeachWorkingTemperature";
             this.tBTeachWorkingTemperature.Size = new System.Drawing.Size(44, 20);
             this.tBTeachWorkingTemperature.TabIndex = 15;
@@ -227,7 +229,7 @@
             // 
             // tBTeachLifeCycle
             // 
-            this.tBTeachLifeCycle.Location = new System.Drawing.Point(168, 181);
+            this.tBTeachLifeCycle.Location = new System.Drawing.Point(168, 176);
             this.tBTeachLifeCycle.Name = "tBTeachLifeCycle";
             this.tBTeachLifeCycle.Size = new System.Drawing.Size(44, 20);
             this.tBTeachLifeCycle.TabIndex = 16;
@@ -235,7 +237,7 @@
             // 
             // tBTeachNumberDays
             // 
-            this.tBTeachNumberDays.Location = new System.Drawing.Point(168, 217);
+            this.tBTeachNumberDays.Location = new System.Drawing.Point(168, 212);
             this.tBTeachNumberDays.Name = "tBTeachNumberDays";
             this.tBTeachNumberDays.Size = new System.Drawing.Size(44, 20);
             this.tBTeachNumberDays.TabIndex = 17;
@@ -243,7 +245,7 @@
             // 
             // tBTeachNumberBreakdowns
             // 
-            this.tBTeachNumberBreakdowns.Location = new System.Drawing.Point(168, 253);
+            this.tBTeachNumberBreakdowns.Location = new System.Drawing.Point(168, 248);
             this.tBTeachNumberBreakdowns.Name = "tBTeachNumberBreakdowns";
             this.tBTeachNumberBreakdowns.Size = new System.Drawing.Size(44, 20);
             this.tBTeachNumberBreakdowns.TabIndex = 18;
@@ -251,7 +253,7 @@
             // 
             // tBTeachPlacesBreakdowns
             // 
-            this.tBTeachPlacesBreakdowns.Location = new System.Drawing.Point(168, 291);
+            this.tBTeachPlacesBreakdowns.Location = new System.Drawing.Point(168, 286);
             this.tBTeachPlacesBreakdowns.Name = "tBTeachPlacesBreakdowns";
             this.tBTeachPlacesBreakdowns.Size = new System.Drawing.Size(44, 20);
             this.tBTeachPlacesBreakdowns.TabIndex = 19;
@@ -259,27 +261,27 @@
             // 
             // tBTeachPrice
             // 
-            this.tBTeachPrice.Location = new System.Drawing.Point(168, 324);
+            this.tBTeachPrice.Location = new System.Drawing.Point(168, 319);
             this.tBTeachPrice.Name = "tBTeachPrice";
             this.tBTeachPrice.Size = new System.Drawing.Size(44, 20);
             this.tBTeachPrice.TabIndex = 20;
             this.tBTeachPrice.Text = "0";
             // 
-            // Plot
+            // lSet
             // 
-            this.Plot.AutoSize = true;
-            this.Plot.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Plot.Location = new System.Drawing.Point(17, 17);
-            this.Plot.Name = "Plot";
-            this.Plot.Size = new System.Drawing.Size(49, 13);
-            this.Plot.TabIndex = 21;
-            this.Plot.Text = "Участок";
+            this.lSet.AutoSize = true;
+            this.lSet.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lSet.Location = new System.Drawing.Point(17, 12);
+            this.lSet.Name = "lSet";
+            this.lSet.Size = new System.Drawing.Size(25, 13);
+            this.lSet.TabIndex = 21;
+            this.lSet.Text = "Сет";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label10.Location = new System.Drawing.Point(89, 17);
+            this.label10.Location = new System.Drawing.Point(89, 12);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(93, 13);
             this.label10.TabIndex = 22;
@@ -301,7 +303,7 @@
             this.panel1.Controls.Add(this.tBPriceTrue);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.label12);
-            this.panel1.Controls.Add(this.Plot);
+            this.panel1.Controls.Add(this.lSet);
             this.panel1.Controls.Add(this.tBPointTrue);
             this.panel1.Controls.Add(this.tBTeachPrice);
             this.panel1.Controls.Add(this.label14);
@@ -324,15 +326,15 @@
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label8);
-            this.panel1.Location = new System.Drawing.Point(99, 12);
+            this.panel1.Location = new System.Drawing.Point(99, 49);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(468, 350);
+            this.panel1.Size = new System.Drawing.Size(468, 351);
             this.panel1.TabIndex = 24;
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(256, 17);
+            this.label15.Location = new System.Drawing.Point(256, 12);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(88, 13);
             this.label15.TabIndex = 31;
@@ -340,7 +342,7 @@
             // 
             // tBPriceTrue
             // 
-            this.tBPriceTrue.Location = new System.Drawing.Point(380, 111);
+            this.tBPriceTrue.Location = new System.Drawing.Point(380, 103);
             this.tBPriceTrue.Name = "tBPriceTrue";
             this.tBPriceTrue.Size = new System.Drawing.Size(45, 20);
             this.tBPriceTrue.TabIndex = 30;
@@ -350,7 +352,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label12.Location = new System.Drawing.Point(253, 108);
+            this.label12.Location = new System.Drawing.Point(253, 103);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(82, 13);
             this.label12.TabIndex = 27;
@@ -358,7 +360,7 @@
             // 
             // tBPointTrue
             // 
-            this.tBPointTrue.Location = new System.Drawing.Point(380, 78);
+            this.tBPointTrue.Location = new System.Drawing.Point(380, 69);
             this.tBPointTrue.Name = "tBPointTrue";
             this.tBPointTrue.Size = new System.Drawing.Size(45, 20);
             this.tBPointTrue.TabIndex = 29;
@@ -368,7 +370,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label14.Location = new System.Drawing.Point(253, 40);
+            this.label14.Location = new System.Drawing.Point(253, 35);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(121, 13);
             this.label14.TabIndex = 25;
@@ -376,7 +378,7 @@
             // 
             // tBDaysTrue
             // 
-            this.tBDaysTrue.Location = new System.Drawing.Point(380, 40);
+            this.tBDaysTrue.Location = new System.Drawing.Point(380, 35);
             this.tBDaysTrue.Name = "tBDaysTrue";
             this.tBDaysTrue.Size = new System.Drawing.Size(45, 20);
             this.tBDaysTrue.TabIndex = 28;
@@ -386,24 +388,40 @@
             // 
             this.label13.AutoSize = true;
             this.label13.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label13.Location = new System.Drawing.Point(253, 75);
+            this.label13.Location = new System.Drawing.Point(253, 70);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(89, 13);
             this.label13.TabIndex = 26;
             this.label13.Text = "Место поломки:";
             // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(116, 19);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(225, 13);
+            this.label16.TabIndex = 25;
+            this.label16.Text = "Средняя температура окружающей среды:";
+            // 
+            // tBAmbientTemp
+            // 
+            this.tBAmbientTemp.Location = new System.Drawing.Point(358, 20);
+            this.tBAmbientTemp.Name = "tBAmbientTemp";
+            this.tBAmbientTemp.Size = new System.Drawing.Size(100, 20);
+            this.tBAmbientTemp.TabIndex = 26;
+            // 
             // TeachNN
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(579, 396);
+            this.ClientSize = new System.Drawing.Size(579, 441);
+            this.Controls.Add(this.tBAmbientTemp);
+            this.Controls.Add(this.label16);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.bInputTestTeachInfo);
             this.Controls.Add(this.lBTeachPlots);
             this.Controls.Add(this.bTeach);
             this.Controls.Add(this.panel1);
-            this.MaximumSize = new System.Drawing.Size(595, 435);
-            this.MinimumSize = new System.Drawing.Size(595, 435);
             this.Name = "TeachNN";
             this.Text = "TeachNeuralNetwork";
             this.panel1.ResumeLayout(false);
@@ -436,7 +454,7 @@
         private System.Windows.Forms.TextBox tBTeachNumberBreakdowns;
         private System.Windows.Forms.TextBox tBTeachPlacesBreakdowns;
         private System.Windows.Forms.TextBox tBTeachPrice;
-        private System.Windows.Forms.Label Plot;
+        private System.Windows.Forms.Label lSet;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Panel panel1;
@@ -447,5 +465,7 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox tBDaysTrue;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TextBox tBAmbientTemp;
     }
 }
