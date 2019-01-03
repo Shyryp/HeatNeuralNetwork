@@ -409,6 +409,7 @@
             this.tBAmbientTemp.Name = "tBAmbientTemp";
             this.tBAmbientTemp.Size = new System.Drawing.Size(100, 20);
             this.tBAmbientTemp.TabIndex = 26;
+            this.tBAmbientTemp.Text = "0";
             // 
             // TeachNN
             // 

@@ -19,13 +19,15 @@ namespace HeatNeuralNetwork
 
         private void teachNNToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            TeachNN teach = new TeachNN(this);
 
+            teach.Show();
         }
 
         private void fillToolStripMenuItem_Click(object sender, EventArgs e)
         {
             InputInformation inputInfo = new InputInformation(this);
-            //this.Visible = false;
+            
             inputInfo.Show();
         }
 
@@ -41,7 +43,7 @@ namespace HeatNeuralNetwork
 
         private void bPlot1_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void bPlot2_Click(object sender, EventArgs e)

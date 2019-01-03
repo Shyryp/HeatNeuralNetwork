@@ -46,6 +46,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Plot.cs" />
+    <Compile Include="ResultPlot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ResultPlot.Designer.cs">
+      <DependentUpon>ResultPlot.cs</DependentUpon>
+    </Compile>
     <Compile Include="TeachNN.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +73,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ResultPlot.resx">
+      <DependentUpon>ResultPlot.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TeachNN.resx">
       <DependentUpon>TeachNN.cs</DependentUpon>
     </EmbeddedResource>
