@@ -8,6 +8,7 @@ namespace HeatNeuralNetwork
 {
     public class Plot
     {
+        public string namePlot = "Участок";
         public int pipelineLength = 0;
         public int pipelineDiameter = 0;
         public int operatingPressure = 0;

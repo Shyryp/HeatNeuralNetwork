@@ -49,7 +49,7 @@
             this.tBNumberBreakdowns = new System.Windows.Forms.TextBox();
             this.tBPlacesBreakdowns = new System.Windows.Forms.TextBox();
             this.tBPrice = new System.Windows.Forms.TextBox();
-            this.Plot = new System.Windows.Forms.Label();
+            this.lPlot = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -258,15 +258,15 @@
             this.tBPrice.TabIndex = 20;
             this.tBPrice.Text = "0";
             // 
-            // Plot
+            // lPlot
             // 
-            this.Plot.AutoSize = true;
-            this.Plot.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Plot.Location = new System.Drawing.Point(141, 22);
-            this.Plot.Name = "Plot";
-            this.Plot.Size = new System.Drawing.Size(49, 13);
-            this.Plot.TabIndex = 21;
-            this.Plot.Text = "Участок";
+            this.lPlot.AutoSize = true;
+            this.lPlot.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lPlot.Location = new System.Drawing.Point(141, 22);
+            this.lPlot.Name = "lPlot";
+            this.lPlot.Size = new System.Drawing.Size(49, 13);
+            this.lPlot.TabIndex = 21;
+            this.lPlot.Text = "Участок";
             // 
             // label10
             // 
@@ -302,7 +302,7 @@
             this.ClientSize = new System.Drawing.Size(424, 401);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.Plot);
+            this.Controls.Add(this.lPlot);
             this.Controls.Add(this.tBPrice);
             this.Controls.Add(this.tBPlacesBreakdowns);
             this.Controls.Add(this.tBNumberBreakdowns);
@@ -357,7 +357,7 @@
         private System.Windows.Forms.TextBox tBNumberBreakdowns;
         private System.Windows.Forms.TextBox tBPlacesBreakdowns;
         private System.Windows.Forms.TextBox tBPrice;
-        private System.Windows.Forms.Label Plot;
+        private System.Windows.Forms.Label lPlot;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Panel panel1;

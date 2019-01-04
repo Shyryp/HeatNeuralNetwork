@@ -10,22 +10,19 @@ using System.Windows.Forms;
 
 namespace HeatNeuralNetwork
 {
-    public partial class TeachNN : Form
+    public partial class LearningProcess : Form
     {
-        public List<Plot> sets = new List<Plot>();
-        MainWindow main;
-        public TeachNN(MainWindow mainWindow)
+        public LearningProcess()
         {
             InitializeComponent();
-            main = mainWindow;
         }
 
-        private void bTeach_Click(object sender, EventArgs e)
+        private void bStop_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void bInputTestTeachInfo_Click(object sender, EventArgs e)
+        private void bStart_Click(object sender, EventArgs e)
         {
 
         }

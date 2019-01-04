@@ -58,6 +58,7 @@ namespace HeatNeuralNetwork
             for (int i = 0; i < 9; i++)
             {
                 buffPlot = new Plot();
+                buffPlot.namePlot = "Участок " + (i+1);
                 buffPlot.pipelineLength = rand.Next(1000)+100;
                 buffPlot.pipelineDiameter = rand.Next(100) + 1;
                 buffPlot.operatingPressure = rand.Next(100) + 1;
@@ -72,6 +73,7 @@ namespace HeatNeuralNetwork
                 buffPlot.priceAnswer = 0;
                 main.plots[i] = buffPlot;
             }
+            lPlot.Text = main.plots[lBPlots.SelectedIndex].namePlot;
             tBPipelineLength.Text= Convert.ToString(
             main.plots[lBPlots.SelectedIndex].pipelineLength);
             tBPipelineDiameter.Text = Convert.ToString(
@@ -94,6 +96,7 @@ namespace HeatNeuralNetwork
 
         private void lBPlots_SelectedIndexChanged(object sender, EventArgs e)
         {
+            lPlot.Text = main.plots[lBPlots.SelectedIndex].namePlot;
             tBPipelineLength.Text = Convert.ToString(
             main.plots[lBPlots.SelectedIndex].pipelineLength);
             tBPipelineDiameter.Text = Convert.ToString(
@@ -112,8 +115,6 @@ namespace HeatNeuralNetwork
             main.plots[lBPlots.SelectedIndex].placesBreakdowns);
             tBPrice.Text = Convert.ToString(
             main.plots[lBPlots.SelectedIndex].price);
-
-            
         }
     }
 }

@@ -46,6 +46,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LearningProcess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LearningProcess.Designer.cs">
+      <DependentUpon>LearningProcess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Neuron.cs" />
     <Compile Include="Plot.cs" />
     <Compile Include="ResultPlot.cs">
       <SubType>Form</SubType>
@@ -73,6 +80,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="LearningProcess.resx">
+      <DependentUpon>LearningProcess.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ResultPlot.resx">
       <DependentUpon>ResultPlot.cs</DependentUpon>
     </EmbeddedResource>

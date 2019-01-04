@@ -38,7 +38,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
+            this.lPlot = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -149,14 +149,14 @@
             this.label10.TabIndex = 9;
             this.label10.Text = "Средняя цена ремонта:";
             // 
-            // label11
+            // lPlot
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(22, 9);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(49, 13);
-            this.label11.TabIndex = 10;
-            this.label11.Text = "Участок";
+            this.lPlot.AutoSize = true;
+            this.lPlot.Location = new System.Drawing.Point(22, 9);
+            this.lPlot.Name = "lPlot";
+            this.lPlot.Size = new System.Drawing.Size(49, 13);
+            this.lPlot.TabIndex = 10;
+            this.lPlot.Text = "Участок";
             // 
             // label12
             // 
@@ -345,7 +345,7 @@
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.label11);
+            this.Controls.Add(this.lPlot);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -375,7 +375,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label lPlot;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
