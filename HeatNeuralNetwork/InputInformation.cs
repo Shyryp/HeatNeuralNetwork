@@ -22,7 +22,33 @@ namespace HeatNeuralNetwork
 
         private void bSave_Click(object sender, EventArgs e)
         {
+            
+            main.plots[lBPlots.SelectedIndex].pipelineLength =
+            Convert.ToInt32(tBPipelineLength.Text);
 
+            main.plots[lBPlots.SelectedIndex].pipelineDiameter = 
+            Convert.ToInt32(tBPipelineDiameter.Text);
+
+            main.plots[lBPlots.SelectedIndex].operatingPressure = 
+            Convert.ToInt32(tBOperatingPressure.Text);
+
+            main.plots[lBPlots.SelectedIndex].workingTemperature =
+            Convert.ToInt32(tBWorkingTemperature.Text);
+
+            main.plots[lBPlots.SelectedIndex].lifeCycle = 
+            Convert.ToInt32(tBLifeCycle.Text);
+
+            main.plots[lBPlots.SelectedIndex].numberDays =
+            Convert.ToInt32(tBNumberDays.Text);
+
+            main.plots[lBPlots.SelectedIndex].numberBreakdowns =
+            Convert.ToInt32(tBNumberBreakdowns.Text);
+
+            main.plots[lBPlots.SelectedIndex].placesBreakdowns = 
+            Convert.ToInt32(tBPlacesBreakdowns.Text);
+
+            main.plots[lBPlots.SelectedIndex].price = 
+            Convert.ToInt32(tBPrice.Text);
         }
 
         private void bInputTestInfo_Click(object sender, EventArgs e)
