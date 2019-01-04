@@ -94,6 +94,7 @@
             this.lBTeachPlots.Name = "lBTeachPlots";
             this.lBTeachPlots.Size = new System.Drawing.Size(81, 364);
             this.lBTeachPlots.TabIndex = 1;
+            this.lBTeachPlots.SelectedIndexChanged += new System.EventHandler(this.lBTeachPlots_SelectedIndexChanged);
             // 
             // bInputTestTeachInfo
             // 
@@ -271,7 +272,7 @@
             // 
             this.lSet.AutoSize = true;
             this.lSet.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lSet.Location = new System.Drawing.Point(17, 12);
+            this.lSet.Location = new System.Drawing.Point(99, 24);
             this.lSet.Name = "lSet";
             this.lSet.Size = new System.Drawing.Size(25, 13);
             this.lSet.TabIndex = 21;
@@ -303,7 +304,6 @@
             this.panel1.Controls.Add(this.tBPriceTrue);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.label12);
-            this.panel1.Controls.Add(this.lSet);
             this.panel1.Controls.Add(this.tBPointTrue);
             this.panel1.Controls.Add(this.tBTeachPrice);
             this.panel1.Controls.Add(this.label14);
@@ -397,7 +397,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(116, 19);
+            this.label16.Location = new System.Drawing.Point(280, 20);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(225, 13);
             this.label16.TabIndex = 25;
@@ -405,11 +405,11 @@
             // 
             // tBAmbientTemp
             // 
-            this.tBAmbientTemp.Location = new System.Drawing.Point(358, 20);
+            this.tBAmbientTemp.Location = new System.Drawing.Point(511, 17);
             this.tBAmbientTemp.Name = "tBAmbientTemp";
-            this.tBAmbientTemp.Size = new System.Drawing.Size(100, 20);
+            this.tBAmbientTemp.Size = new System.Drawing.Size(40, 20);
             this.tBAmbientTemp.TabIndex = 26;
-            this.tBAmbientTemp.Text = "0";
+            this.tBAmbientTemp.Text = "100";
             // 
             // TeachNN
             // 
@@ -420,6 +420,7 @@
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.bInputTestTeachInfo);
+            this.Controls.Add(this.lSet);
             this.Controls.Add(this.lBTeachPlots);
             this.Controls.Add(this.bTeach);
             this.Controls.Add(this.panel1);

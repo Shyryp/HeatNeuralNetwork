@@ -12,9 +12,13 @@ namespace HeatNeuralNetwork
 {
     public partial class LearningProcess : Form
     {
-        public LearningProcess()
+        TeachNN teach;
+        int ambientTemperature = 0;
+        public LearningProcess(TeachNN teach, int ambientTemperature)
         {
             InitializeComponent();
+            this.teach = teach;
+            this.ambientTemperature = ambientTemperature;
         }
 
         private void bStop_Click(object sender, EventArgs e)

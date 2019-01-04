@@ -13,7 +13,6 @@ namespace HeatNeuralNetwork
     public partial class MainWindow : Form
     {
         public List<Plot> plots = new List<Plot>();
-        public List<Plot> sets = new List<Plot>();
         public int ambientTemperature = 0;
         public MainWindow()
         {
@@ -22,7 +21,7 @@ namespace HeatNeuralNetwork
             for (int i = 0; i < 9; i++)
             {
                 plots.Add(plot);
-                sets.Add(plot);
+                
             }
         }
 
