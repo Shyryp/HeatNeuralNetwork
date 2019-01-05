@@ -29,7 +29,7 @@ namespace HeatNeuralNetwork
                 plots.Add(plot);
             }
             Neuron neuron;
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < 11; i++)
             {
                 neuron = new Neuron();
                 neuronsLayerInput.Add(neuron);

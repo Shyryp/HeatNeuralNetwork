@@ -47,6 +47,9 @@
             this.bStart = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.bSaveLearn = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -70,7 +73,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(34, 99);
+            this.label3.Location = new System.Drawing.Point(279, 56);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(50, 13);
             this.label3.TabIndex = 2;
@@ -169,7 +172,7 @@
             // lError
             // 
             this.lError.AutoSize = true;
-            this.lError.Location = new System.Drawing.Point(90, 99);
+            this.lError.Location = new System.Drawing.Point(335, 56);
             this.lError.Name = "lError";
             this.lError.Size = new System.Drawing.Size(13, 13);
             this.lError.TabIndex = 13;
@@ -212,11 +215,41 @@
             this.bSaveLearn.UseVisualStyleBackColor = true;
             this.bSaveLearn.Click += new System.EventHandler(this.bSaveLearn_Click);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(182, 110);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(28, 13);
+            this.label6.TabIndex = 17;
+            this.label6.Text = "Дни";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(279, 110);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(37, 13);
+            this.label7.TabIndex = 18;
+            this.label7.Text = "Точка";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(372, 110);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(33, 13);
+            this.label8.TabIndex = 19;
+            this.label8.Text = "Цена";
+            // 
             // LearningProcess
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(467, 241);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.bSaveLearn);
             this.Controls.Add(this.bStart);
             this.Controls.Add(this.bStop);
@@ -262,5 +295,8 @@
         private System.Windows.Forms.Button bStart;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button bSaveLearn;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
     }
 }

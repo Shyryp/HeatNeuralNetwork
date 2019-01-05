@@ -14,5 +14,14 @@ namespace HeatNeuralNetwork
         public double input = 0;
         public double output = 0;
         public double delta = 0;
+
+        public void Sigmoid()
+        {
+            output = 1.0 / (1 + Math.Exp(input));
+        }
+        public void Sigmoid(int intp)
+        {
+            output = 1.0 / (1 + Math.Exp(intp));
+        }
     }
 }
