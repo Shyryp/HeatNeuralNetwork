@@ -13,6 +13,8 @@ namespace HeatNeuralNetwork
     public partial class TeachNN : Form
     {
         public List<Plot> sets = new List<Plot>();
+        
+
         MainWindow main;
         public TeachNN(MainWindow mainWindow)
         {
@@ -30,7 +32,7 @@ namespace HeatNeuralNetwork
 
         private void bTeach_Click(object sender, EventArgs e)
         {
-            LearningProcess learningProcess = new LearningProcess(this, main.ambientTemperature);
+            LearningProcess learningProcess = new LearningProcess(this, main);
             learningProcess.Show();
         }
 

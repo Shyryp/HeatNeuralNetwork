@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -44,6 +45,8 @@
             this.lError = new System.Windows.Forms.Label();
             this.bStop = new System.Windows.Forms.Button();
             this.bStart = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.bSaveLearn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -174,9 +177,10 @@
             // 
             // bStop
             // 
+            this.bStop.Enabled = false;
             this.bStop.Location = new System.Drawing.Point(37, 206);
             this.bStop.Name = "bStop";
-            this.bStop.Size = new System.Drawing.Size(140, 23);
+            this.bStop.Size = new System.Drawing.Size(127, 23);
             this.bStop.TabIndex = 14;
             this.bStop.Text = "Остановить обучение";
             this.bStop.UseVisualStyleBackColor = true;
@@ -186,17 +190,34 @@
             // 
             this.bStart.Location = new System.Drawing.Point(332, 206);
             this.bStart.Name = "bStart";
-            this.bStart.Size = new System.Drawing.Size(75, 23);
+            this.bStart.Size = new System.Drawing.Size(107, 23);
             this.bStart.TabIndex = 15;
             this.bStart.Text = "Старт";
             this.bStart.UseVisualStyleBackColor = true;
             this.bStart.Click += new System.EventHandler(this.bStart_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // bSaveLearn
+            // 
+            this.bSaveLearn.Enabled = false;
+            this.bSaveLearn.Location = new System.Drawing.Point(207, 206);
+            this.bSaveLearn.Name = "bSaveLearn";
+            this.bSaveLearn.Size = new System.Drawing.Size(75, 23);
+            this.bSaveLearn.TabIndex = 16;
+            this.bSaveLearn.Text = "Сохранить";
+            this.bSaveLearn.UseVisualStyleBackColor = true;
+            this.bSaveLearn.Click += new System.EventHandler(this.bSaveLearn_Click);
             // 
             // LearningProcess
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(467, 241);
+            this.Controls.Add(this.bSaveLearn);
             this.Controls.Add(this.bStart);
             this.Controls.Add(this.bStop);
             this.Controls.Add(this.lError);
@@ -215,6 +236,7 @@
             this.Controls.Add(this.label1);
             this.Name = "LearningProcess";
             this.Text = "LearningProcess";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.LearningProcess_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -238,5 +260,7 @@
         private System.Windows.Forms.Label lError;
         private System.Windows.Forms.Button bStop;
         private System.Windows.Forms.Button bStart;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button bSaveLearn;
     }
 }

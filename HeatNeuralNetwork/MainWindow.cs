@@ -13,16 +13,43 @@ namespace HeatNeuralNetwork
     public partial class MainWindow : Form
     {
         public List<Plot> plots = new List<Plot>();
+        public List<Neuron> neuronsLayerInput = new List<Neuron>();
+        public List<Neuron> neuronsLayerHidden1 = new List<Neuron>();
+        public List<Neuron> neuronsLayerHidden2 = new List<Neuron>();
+        public List<Neuron> neuronsLayerOutput = new List<Neuron>();
+        
         public int ambientTemperature = 0;
         public MainWindow()
         {
             InitializeComponent();
-            Plot plot = new Plot();
+            Plot plot;
             for (int i = 0; i < 9; i++)
             {
+                plot = new Plot();
                 plots.Add(plot);
-                
             }
+            Neuron neuron;
+            for (int i = 0; i < 10; i++)
+            {
+                neuron = new Neuron();
+                neuronsLayerInput.Add(neuron);
+            }
+            for (int i = 0; i < 7; i++)
+            {
+                neuron = new Neuron();
+                neuronsLayerHidden1.Add(neuron);
+            }
+            for (int i = 0; i < 5; i++)
+            {
+                neuron = new Neuron();
+                neuronsLayerHidden2.Add(neuron);
+            }
+            for (int i = 0; i < 3; i++)
+            {
+                neuron = new Neuron();
+                neuronsLayerOutput.Add(neuron);
+            }
+
         }
 
         private void teachNNToolStripMenuItem_Click(object sender, EventArgs e)
@@ -42,7 +69,7 @@ namespace HeatNeuralNetwork
         private void calculateToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //прогон в нейронной сети участков
-
+            Console.WriteLine(neuronsLayerInput[0].delta);
             //ниже включаем все кнопки
             bPlot1.Enabled = true;
             bPlot2.Enabled = true;
