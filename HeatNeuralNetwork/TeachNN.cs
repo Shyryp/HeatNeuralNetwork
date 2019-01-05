@@ -39,7 +39,7 @@ namespace HeatNeuralNetwork
         private void bInputTestTeachInfo_Click(object sender, EventArgs e)
         {
             Plot buffPlot;
-            Random rand = new Random();
+            Random rand = new Random(Environment.TickCount);
             main.ambientTemperature = Convert.ToInt32(tBAmbientTemp.Text);
 
             for (int i = 0; i < 9; i++)
@@ -70,7 +70,8 @@ namespace HeatNeuralNetwork
 
                 sets[i] = buffPlot;
             }
-            lSet.Text = sets[lBTeachPlots.SelectedIndex].namePlot;
+            
+                lSet.Text = sets[lBTeachPlots.SelectedIndex].namePlot;
 
             tBTeachPipelineLength.Text = Convert.ToString(
             sets[lBTeachPlots.SelectedIndex].pipelineLength);
