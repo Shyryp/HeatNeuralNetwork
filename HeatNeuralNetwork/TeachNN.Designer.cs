@@ -62,6 +62,7 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.tBAmbientTemp = new System.Windows.Forms.TextBox();
+            this.bSave = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -411,11 +412,22 @@
             this.tBAmbientTemp.TabIndex = 26;
             this.tBAmbientTemp.Text = "30";
             // 
+            // bSave
+            // 
+            this.bSave.Location = new System.Drawing.Point(283, 406);
+            this.bSave.Name = "bSave";
+            this.bSave.Size = new System.Drawing.Size(116, 23);
+            this.bSave.TabIndex = 27;
+            this.bSave.Text = "Сохранить";
+            this.bSave.UseVisualStyleBackColor = true;
+            this.bSave.Click += new System.EventHandler(this.bSave_Click);
+            // 
             // TeachNN
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(579, 441);
+            this.Controls.Add(this.bSave);
             this.Controls.Add(this.tBAmbientTemp);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label11);
@@ -469,5 +481,6 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TextBox tBAmbientTemp;
+        private System.Windows.Forms.Button bSave;
     }
 }

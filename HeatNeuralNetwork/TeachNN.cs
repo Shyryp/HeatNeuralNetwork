@@ -32,6 +32,40 @@ namespace HeatNeuralNetwork
 
         private void bTeach_Click(object sender, EventArgs e)
         {
+            main.ambientTemperature = Convert.ToInt32(tBAmbientTemp.Text) + 100;
+
+            sets[lBTeachPlots.SelectedIndex].pipelineLength =
+            Convert.ToInt32(tBTeachPipelineLength.Text);
+
+            sets[lBTeachPlots.SelectedIndex].pipelineDiameter =
+            Convert.ToInt32(tBTeachPipelineDiameter.Text);
+
+            sets[lBTeachPlots.SelectedIndex].operatingPressure =
+            Convert.ToInt32(tBTeachOperatingPressure.Text);
+
+            sets[lBTeachPlots.SelectedIndex].workingTemperature =
+            Convert.ToInt32(tBTeachWorkingTemperature.Text);
+
+            sets[lBTeachPlots.SelectedIndex].lifeCycle =
+            Convert.ToInt32(tBTeachLifeCycle.Text);
+
+            sets[lBTeachPlots.SelectedIndex].numberDays =
+            Convert.ToInt32(tBTeachNumberDays.Text);
+
+            sets[lBTeachPlots.SelectedIndex].numberBreakdowns =
+            Convert.ToInt32(tBTeachNumberBreakdowns.Text);
+
+            sets[lBTeachPlots.SelectedIndex].placesBreakdowns =
+            Convert.ToInt32(tBTeachPlacesBreakdowns.Text);
+
+            sets[lBTeachPlots.SelectedIndex].daysAnswer =
+            Convert.ToInt32(tBDaysTrue.Text);
+
+            sets[lBTeachPlots.SelectedIndex].pointAnswer =
+            Convert.ToInt32(tBPointTrue.Text);
+
+            sets[lBTeachPlots.SelectedIndex].priceAnswer =
+            Convert.ToInt32(tBPriceTrue.Text);
             LearningProcess learningProcess = new LearningProcess(this, main);
             learningProcess.Show();
         }
@@ -50,28 +84,38 @@ namespace HeatNeuralNetwork
                 buffPlot.pipelineDiameter = rand.Next(100) + 1;
                 buffPlot.operatingPressure = rand.Next(100) + 1;
                 buffPlot.workingTemperature = rand.Next(100) + 1;
-                buffPlot.lifeCycle = rand.Next(100) + 2;
-                buffPlot.numberDays = rand.Next(buffPlot.lifeCycle - 1) + 1;
+                buffPlot.numberDays = rand.Next(80) + 1;
+                buffPlot.lifeCycle = rand.Next(buffPlot.numberDays,200) + 20;
                 buffPlot.numberBreakdowns = rand.Next(10) + 1;
                 buffPlot.placesBreakdowns = rand.Next(buffPlot.pipelineLength - 1) + 1;
-                buffPlot.price = rand.Next(10000) + 1;
+                buffPlot.price = rand.Next(500) + 1;
                 //Верные Ответы сгенерированные через формулы
-                buffPlot.daysAnswer =(int)( (buffPlot.lifeCycle*1.5- buffPlot.numberBreakdowns
-                    + ((double)buffPlot.pipelineLength/ (double)buffPlot.pipelineDiameter))
-                    -  buffPlot.numberDays - (1.0/ (double)(main.ambientTemperature+101))*25);
+                buffPlot.daysAnswer = (int)(rand.Next((buffPlot.lifeCycle-buffPlot.numberDays) - ((buffPlot.lifeCycle - buffPlot.numberDays) / 10),
+                    (buffPlot.lifeCycle - buffPlot.numberDays) + ((buffPlot.lifeCycle - buffPlot.numberDays) / 10)) - (1.0/main.ambientTemperature)*10);
+                if (buffPlot.daysAnswer <= 0)
+                {
+                    buffPlot.daysAnswer = 1;
+                }
 
-                buffPlot.pointAnswer = (int)(((double)(buffPlot.placesBreakdowns*buffPlot.numberBreakdowns)
-                    + (double)buffPlot.pipelineLength/(((double)buffPlot.operatingPressure/2.0)+
-                    ((double)buffPlot.workingTemperature/2.0)))/((double)buffPlot.numberBreakdowns+1.0));
+                buffPlot.pointAnswer = (int)(rand.Next(buffPlot.placesBreakdowns - (buffPlot.placesBreakdowns / 10),
+                    buffPlot.placesBreakdowns + (buffPlot.placesBreakdowns / 10)) + (1.0 / buffPlot.operatingPressure) * 100
+                    + (1.0 / buffPlot.workingTemperature) * 100);
+                if (buffPlot.pointAnswer >= buffPlot.placesBreakdowns)
+                {
+                    buffPlot.pointAnswer = buffPlot.pointAnswer - ((buffPlot.pointAnswer - buffPlot.placesBreakdowns)+1);
+                }
+                if (buffPlot.pointAnswer <= 0)
+                {
+                    buffPlot.pointAnswer = 1;
+                }
 
-                buffPlot.priceAnswer = (int)(((buffPlot.price * buffPlot.numberBreakdowns) +
-                    buffPlot.price + (double)buffPlot.price / ((1.0 / (double) buffPlot.numberBreakdowns) * 10.0)) / 
-                    (double)buffPlot.numberBreakdowns);
+                buffPlot.priceAnswer = (int)(rand.Next(buffPlot.price-(buffPlot.price/10), 
+                    buffPlot.price + (buffPlot.price / 10)) + buffPlot.numberBreakdowns*5);
 
                 sets[i] = buffPlot;
             }
             
-                lSet.Text = sets[lBTeachPlots.SelectedIndex].namePlot;
+                lSet.Text = sets[lBTeachPlots.SelectedIndex].namePlot; 
 
             tBTeachPipelineLength.Text = Convert.ToString(
             sets[lBTeachPlots.SelectedIndex].pipelineLength);
@@ -149,6 +193,44 @@ namespace HeatNeuralNetwork
 
             tBPriceTrue.Text = Convert.ToString(
             sets[lBTeachPlots.SelectedIndex].priceAnswer);
+        }
+
+        private void bSave_Click(object sender, EventArgs e)
+        {
+            main.ambientTemperature = Convert.ToInt32(tBAmbientTemp.Text) + 100;
+
+            sets[lBTeachPlots.SelectedIndex].pipelineLength =
+            Convert.ToInt32(tBTeachPipelineLength.Text);
+
+            sets[lBTeachPlots.SelectedIndex].pipelineDiameter =
+            Convert.ToInt32(tBTeachPipelineDiameter.Text);
+
+            sets[lBTeachPlots.SelectedIndex].operatingPressure =
+            Convert.ToInt32(tBTeachOperatingPressure.Text);
+
+            sets[lBTeachPlots.SelectedIndex].workingTemperature =
+            Convert.ToInt32(tBTeachWorkingTemperature.Text);
+
+            sets[lBTeachPlots.SelectedIndex].lifeCycle =
+            Convert.ToInt32(tBTeachLifeCycle.Text);
+
+            sets[lBTeachPlots.SelectedIndex].numberDays =
+            Convert.ToInt32(tBTeachNumberDays.Text);
+
+            sets[lBTeachPlots.SelectedIndex].numberBreakdowns =
+            Convert.ToInt32(tBTeachNumberBreakdowns.Text);
+
+            sets[lBTeachPlots.SelectedIndex].placesBreakdowns =
+            Convert.ToInt32(tBTeachPlacesBreakdowns.Text);
+
+            sets[lBTeachPlots.SelectedIndex].daysAnswer =
+            Convert.ToInt32(tBDaysTrue.Text);
+
+            sets[lBTeachPlots.SelectedIndex].pointAnswer =
+            Convert.ToInt32(tBPointTrue.Text);
+
+            sets[lBTeachPlots.SelectedIndex].priceAnswer =
+            Convert.ToInt32(tBPriceTrue.Text);
         }
     }
 }

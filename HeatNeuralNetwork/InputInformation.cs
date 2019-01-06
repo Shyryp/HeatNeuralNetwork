@@ -63,11 +63,11 @@ namespace HeatNeuralNetwork
                 buffPlot.pipelineDiameter = rand.Next(100) + 1;
                 buffPlot.operatingPressure = rand.Next(100) + 1;
                 buffPlot.workingTemperature = rand.Next(100) + 1;
-                buffPlot.lifeCycle = rand.Next(100) + 2;
-                buffPlot.numberDays = rand.Next(buffPlot.lifeCycle-1) + 1;
+                buffPlot.numberDays = rand.Next(80) + 1;
+                buffPlot.lifeCycle = rand.Next(buffPlot.numberDays, 200) + 20;
                 buffPlot.numberBreakdowns = rand.Next(10) + 1;
                 buffPlot.placesBreakdowns = rand.Next(buffPlot.pipelineLength-1) + 1;
-                buffPlot.price = rand.Next(10000) + 1;
+                buffPlot.price = rand.Next(500) + 1;
                 buffPlot.daysAnswer = 0;
                 buffPlot.pointAnswer = 0;
                 buffPlot.priceAnswer = 0;
