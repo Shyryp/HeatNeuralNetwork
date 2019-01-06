@@ -17,7 +17,9 @@ namespace HeatNeuralNetwork
         public List<Neuron> neuronsLayerHidden1 = new List<Neuron>();
         public List<Neuron> neuronsLayerHidden2 = new List<Neuron>();
         public List<Neuron> neuronsLayerOutput = new List<Neuron>();
-        
+        public int countPlot = 0;
+
+
         public int ambientTemperature = 0;
         public MainWindow()
         {
@@ -69,7 +71,7 @@ namespace HeatNeuralNetwork
         private void calculateToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //прогон в нейронной сети участков
-            Console.WriteLine(neuronsLayerInput[0].delta);
+            Learn();
             //ниже включаем все кнопки
             bPlot1.Enabled = true;
             bPlot2.Enabled = true;
@@ -81,10 +83,115 @@ namespace HeatNeuralNetwork
             bPlot8.Enabled = true;
             bPlot9.Enabled = true;
         }
+        public void Learn()
+        {
+            while (true)
+            {
+                //Инициализация нейронов (обнуление переменных)
+                InitNN();
+                //Ввод данных
+                InputDataInNN();
+                //Пропускаем информацию через нейронную сеть
+                ILToHL1();
+                HL1ToHL2();
+                //След функция вырабатывает ответ
+                HL2ToOL();
+                plots[countPlot].daysAnswer =(int) (1.0/neuronsLayerOutput[0].output);
+                plots[countPlot].pointAnswer = (int)(1.0 / neuronsLayerOutput[1].output);
+                plots[countPlot].priceAnswer = (int)(1.0 / neuronsLayerOutput[2].output);
+                //Thread.Sleep(40);
+                if (countPlot >= 8)
+                {
+                    countPlot = 0;
+                    break;
+                }
+                countPlot++;
+            }
+        }
+        public void InitNN()
+        {
+            for (int i = 0; i < 11; i++)
+            {
+                neuronsLayerInput[i].input = 0;
+                neuronsLayerInput[i].output = 0;
+                neuronsLayerInput[i].delta = 0;
+            }
+            for (int i = 0; i < 7; i++)
+            {
+                neuronsLayerHidden1[i].input = 0;
+                neuronsLayerHidden1[i].output = 0;
+                neuronsLayerHidden1[i].delta = 0;
+            }
+            for (int i = 0; i < 5; i++)
+            {
+                neuronsLayerHidden2[i].input = 0;
+                neuronsLayerHidden2[i].output = 0;
+                neuronsLayerHidden2[i].delta = 0;
+            }
+            for (int i = 0; i < 3; i++)
+            {
+                neuronsLayerOutput[i].input = 0;
+                neuronsLayerOutput[i].output = 0;
+                neuronsLayerOutput[i].delta = 0;
+            }
+        }
 
-        private void resetAllToolStripMenuItem2_Click(object sender, EventArgs e)
+        public void InputDataInNN()
         {
 
+            neuronsLayerInput[0].Sigmoid(plots[countPlot].pipelineLength);
+            neuronsLayerInput[1].Sigmoid(plots[countPlot].pipelineDiameter);
+            neuronsLayerInput[2].Sigmoid(plots[countPlot].operatingPressure);
+            neuronsLayerInput[3].Sigmoid(plots[countPlot].workingTemperature);
+            neuronsLayerInput[4].Sigmoid(plots[countPlot].lifeCycle);
+            neuronsLayerInput[5].Sigmoid(plots[countPlot].numberDays);
+            neuronsLayerInput[6].Sigmoid(plots[countPlot].numberBreakdowns);
+            neuronsLayerInput[7].Sigmoid(plots[countPlot].placesBreakdowns);
+            neuronsLayerInput[8].Sigmoid(plots[countPlot].price);
+            neuronsLayerInput[9].Sigmoid(ambientTemperature);
+            neuronsLayerInput[10].output = 1;
+
+        }
+        public void ILToHL1()
+        {
+            for (int i = 0; i < 6; i++)
+            {
+                for (int j = 0; j < 11; j++)
+                    neuronsLayerHidden1[i].input =
+                        neuronsLayerHidden1[i].input +
+                        neuronsLayerInput[j].output *
+                        neuronsLayerInput[j].weights[i];
+
+                neuronsLayerHidden1[i].Sigmoid();
+            }
+            neuronsLayerHidden1[6].output = 1;
+        }
+        public void HL1ToHL2()
+        {
+            for (int i = 0; i < 4; i++)
+            {
+                for (int j = 0; j < 7; j++)
+                    neuronsLayerHidden2[i].input =
+                        neuronsLayerHidden2[i].input +
+                        neuronsLayerHidden1[j].output *
+                        neuronsLayerHidden1[j].weights[i];
+
+                neuronsLayerHidden2[i].Sigmoid();
+            }
+            neuronsLayerHidden2[4].output = 1;
+        }
+        public void HL2ToOL()
+        {
+            for (int i = 0; i < 3; i++)
+            {
+                for (int j = 0; j < 5; j++)
+                    neuronsLayerOutput[i].input =
+                        neuronsLayerOutput[i].input +
+                        neuronsLayerHidden2[j].output *
+                        neuronsLayerHidden2[j].weights[i];
+
+                neuronsLayerOutput[i].Sigmoid();
+            }
         }
 
         private void bPlot1_Click(object sender, EventArgs e)

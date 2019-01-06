@@ -41,7 +41,6 @@
             this.teachNNToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fillToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.calculateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.resetAllToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -149,8 +148,7 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.teachNNToolStripMenuItem,
             this.fillToolStripMenuItem,
-            this.calculateToolStripMenuItem,
-            this.resetAllToolStripMenuItem2});
+            this.calculateToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(503, 24);
@@ -177,13 +175,6 @@
             this.calculateToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
             this.calculateToolStripMenuItem.Text = "Рассчитать";
             this.calculateToolStripMenuItem.Click += new System.EventHandler(this.calculateToolStripMenuItem_Click);
-            // 
-            // resetAllToolStripMenuItem2
-            // 
-            this.resetAllToolStripMenuItem2.Name = "resetAllToolStripMenuItem2";
-            this.resetAllToolStripMenuItem2.Size = new System.Drawing.Size(93, 20);
-            this.resetAllToolStripMenuItem2.Text = "Сбросить всё";
-            this.resetAllToolStripMenuItem2.Click += new System.EventHandler(this.resetAllToolStripMenuItem2_Click);
             // 
             // MainWindow
             // 
@@ -226,7 +217,6 @@
         private System.Windows.Forms.ToolStripMenuItem teachNNToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem fillToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem calculateToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem resetAllToolStripMenuItem2;
     }
 }
 

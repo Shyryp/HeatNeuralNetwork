@@ -16,7 +16,7 @@ namespace HeatNeuralNetwork
         {
             InitializeComponent();
             lPlot.Text = plot.namePlot;
-            lResultAT.Text = Convert.ToString(aTemp);
+            lResultAT.Text = Convert.ToString(aTemp-100);
             lResultLength.Text = Convert.ToString(plot.pipelineLength);
             lResultDiameter.Text = Convert.ToString(plot.pipelineDiameter);
             lResultPressure.Text = Convert.ToString(plot.operatingPressure);

@@ -21,11 +21,13 @@ namespace HeatNeuralNetwork
         static public List<Neuron> neuronsLayerHiddenLearning1 = new List<Neuron>();
         static public List<Neuron> neuronsLayerHiddenLearning2 = new List<Neuron>();
         static public List<Neuron> neuronsLayerOutputLearning = new List<Neuron>();
-        static public double A = 0.005;
-        static public double E = 9;
+        static public double A = 0.5;
+        static public double E = 50;
         static public int era = 0;
         static public int trainingSet = 0;
         static public double errorGeneral = 0;
+        static public bool outputNN = true;
+        static Mutex mutexObj = new Mutex();
 
         public LearningProcess(TeachNN teach, MainWindow main)
         {
@@ -98,8 +100,14 @@ namespace HeatNeuralNetwork
 
         private void bStop_Click(object sender, EventArgs e)
         {
-            t.Suspend();
+            mutexObj.WaitOne();
+            // t.Suspend();
+            
+            //mutexObj.ReleaseMutex();
+            
             bSaveLearn.Enabled = true;
+            bStop.Enabled = false;
+            bStart.Enabled = true;
         }
 
         private void bStart_Click(object sender, EventArgs e)
@@ -109,13 +117,17 @@ namespace HeatNeuralNetwork
                 t = new Thread(new ThreadStart(Learn));
                 t.Start();
                 bStart.Text = "Возобновить";
+                bStart.Enabled = false;
                 bStop.Enabled = true;
                 bSaveLearn.Enabled = false;
             }
             else if (t != null)
             {
-                t.Resume();
+                // t.Resume();
                 bSaveLearn.Enabled = false;
+                bStart.Enabled = false;
+                bStop.Enabled = true;
+                mutexObj.ReleaseMutex();
             }
         }
 
@@ -124,7 +136,8 @@ namespace HeatNeuralNetwork
             //InitNN();
             while (true)
             {
-                
+                outputNN = false;
+                mutexObj.WaitOne();
                 //Инициализация сета (обнуление переменных)
                 InitTrainingSet();
                 //Ввод данных нового сета
@@ -136,6 +149,8 @@ namespace HeatNeuralNetwork
                 HL2ToOL();
                 //Поиск ошибки, дельты ошибки и изменение весов
                 FindErrorOutput();
+                mutexObj.ReleaseMutex();
+                outputNN = true;
                 FindErrorAndCorrectWeightHL2();
                 FindErrorAndCorrectWeightHL1();
                 FindErrorAndCorrectWeightIL();
@@ -324,21 +339,24 @@ namespace HeatNeuralNetwork
                 }
             }
         }
-
+        static int kkk = 0;
         private void timer1_Tick(object sender, EventArgs e)
         {
+            
             lEra.Text = Convert.ToString(era);
-            lTrainingSet.Text = Convert.ToString(trainingSet+1);
-            lError.Text = Convert.ToString(errorGeneral);
-            lTrueAnswer1.Text = Convert.ToString(sets[trainingSet].daysAnswer);
-            lTrueAnswer2.Text = Convert.ToString(sets[trainingSet].pointAnswer);
-            lTrueAnswer3.Text = Convert.ToString(sets[trainingSet].priceAnswer);
-            lAnswer1.Text = Convert.ToString(1.0 / 
-                neuronsLayerOutputLearning[0].output);
-            lAnswer2.Text = Convert.ToString(1.0 /
-                neuronsLayerOutputLearning[1].output);
-            lAnswer3.Text = Convert.ToString(1.0 /
-                neuronsLayerOutputLearning[2].output);
+            mutexObj.WaitOne();
+                lTrainingSet.Text = Convert.ToString(trainingSet + 1);
+                lError.Text = Convert.ToString(errorGeneral);
+                lTrueAnswer1.Text = Convert.ToString(sets[trainingSet].daysAnswer);
+                lTrueAnswer2.Text = Convert.ToString(sets[trainingSet].pointAnswer);
+                lTrueAnswer3.Text = Convert.ToString(sets[trainingSet].priceAnswer);
+                    lAnswer1.Text = Convert.ToString((int)(1.0 /
+                        neuronsLayerOutputLearning[0].output));
+                    lAnswer2.Text = Convert.ToString((int)(1.0 /
+                        neuronsLayerOutputLearning[1].output));
+                    lAnswer3.Text = Convert.ToString((int)(1.0 /
+                        neuronsLayerOutputLearning[2].output));
+            mutexObj.ReleaseMutex();
         }
 
         private void bSaveLearn_Click(object sender, EventArgs e)

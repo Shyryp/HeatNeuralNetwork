@@ -40,7 +40,7 @@ namespace HeatNeuralNetwork
         {
             Plot buffPlot;
             Random rand = new Random(Environment.TickCount);
-            main.ambientTemperature = Convert.ToInt32(tBAmbientTemp.Text);
+            main.ambientTemperature = Convert.ToInt32(tBAmbientTemp.Text)+100;
 
             for (int i = 0; i < 9; i++)
             {
